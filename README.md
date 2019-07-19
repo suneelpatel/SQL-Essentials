@@ -181,6 +181,74 @@ Used along with where clauses to display the specified column in ascending order
 
 
 # 4. RETRIEVE DATA FROM MULTIPLE TABLES
+### SQL Join:
+A join clause is used to fetch data from two or more data tables, based on join condition. Join Clause is used to combine row from one (Self-Join) or more tables, based on a related column(s) between them.  
+#### Self Join 	
+A table can be joined to itself in a self join.
+##### Syntax: 
+SELECT <column_list>
+
+FROM <table_name1> t1
+
+JOIN<table_name1> t2
+
+ON t1.column_name = t2.column_name;
+
+#### Inner Join 	
+The INNER JOIN fetches records that have matching values in both tables
+##### Syntax:
+SELECT <column_list>
+
+FROM <table_name1> as t1
+
+INNER JOIN<table_name2>as t2
+
+ON t1.column_name = t2.column_name;
+
+#### Left Outer Join	
+The LEFT OUTER Join returns rows to the left (t1) even if there are no rows on the right (t2) of the join clause
+The result is NULL for rows on RIGHT Table, when there is no match
+##### Syntax:
+SELECT <column_list>
+
+FROM <table_name1> as t1
+
+LEFT OUTER JOIN <table_name2> as t2
+
+ON t1.column_name =  t2.column_name;
+
+#### Right Outer Join	
+The RIGHT OUTER Join returns rows to the right (t2) relation (table) even if there are no matching rows on the left (t1) relation table.
+The result is NULL for rows on LEFT Table, when there is no match
+##### Syntax:
+SELECT <column_list>
+
+FROM <table_name1> as t1
+
+RIGHT OUTER JOIN <table_name2> as t2
+
+ON t1.column_name =  t2.column_name;
+
+#### Full Outer Join	
+The FULL OUTER JOIN keyword return all records when there is a match in either left (t1) or right (t2) table records
+If there are rows in “t1” that do not have matches in “t2” or vice-versa, those rows will be listed as well
+##### Syntax:
+SELECT <column_list>
+
+FROM <table_name1> as t1
+
+FULL OUTER JOIN <table_name2> as t2
+
+ON t1.column_name =  t2.column_name;
+
+#### Cross Join	
+Displays all the rows and all the columns of both the tables. This is also called **Cartesian product**.
+##### Syntax:
+SELECT <column_list>
+
+FROM <table_name1> as t1
+
+CROSS JOIN <table_name2> as t2;
 
 
 # 5. INBUILT FUNCTIONS IN SQL
