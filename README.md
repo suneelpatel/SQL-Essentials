@@ -259,56 +259,56 @@ Built-In-Functions	Built-in-Functions are used to calculate values and manipulat
 
 ### Conversation Functions	
 Functions that support data type casting and converting.
-**CAST (expr AS datatype):** Return value of specified datatype on success Throws error on failure 
-**CONVERT (datatype, expr):** Return value of specified datatype on success Throws error on failure 
-**PARSE (value AS datatype):** Return value of specified datatype on success Throws error on failure 
-**TRY_CAST (expr AS datatype):** Returns value of specified datatype on success NULL on failure
-**TRY_CONVERT(datatype, expr):**  Returns value of specified datatype on success NULL on failure
-**TRY_PARSE (value AS datatype):** Returns value of specified datatype on success NULL on failure
+* **CAST (expr AS datatype):** Return value of specified datatype on success Throws error on failure 
+* **CONVERT (datatype, expr):** Return value of specified datatype on success Throws error on failure 
+* **PARSE (value AS datatype):** Return value of specified datatype on success Throws error on failure 
+* **TRY_CAST (expr AS datatype):** Returns value of specified datatype on success NULL on failure
+* **TRY_CONVERT(datatype, expr):**  Returns value of specified datatype on success NULL on failure
+* **TRY_PARSE (value AS datatype):** Returns value of specified datatype on success NULL on failure
 
 ### Logical Functions	
 Scalar functions that perform logical operation
-**CHOOSE (index, val_1, val_2 [, val_n])** : Return a specified index from a list of values. Return NULL, if index is 0 or greater than number of items
-**IIF (boolean_expr, true_value, false_value)** : Return one of two values, based on whether the Boolean expr evaluates to true or false
+* **CHOOSE (index, val_1, val_2 [, val_n])** : Return a specified index from a list of values. Return NULL, if index is 0 or greater than number of items
+* **IIF (boolean_expr, true_value, false_value)** : Return one of two values, based on whether the Boolean expr evaluates to true or false
 
 ### Math Functions	
 Scalar functions perform a calculation, usually based on input values that are provided as arguments, and return a numeric value.
-**ABS(num_expr)** : Return absolute (positive) value of the specified numeric expr
-**RAND(seed**) : Return a pseudo-random float value from 0 to 1 (exclusive). Seed is optional value
-**EXP(float_expr)** : Returns the exponential value 
-**ROUND(num_expr, length)** : Returns a numeric value, rounded to the specified length or precision
-**FLOOR(num_expr)** : Returns the largest integer less than or equal  to the specified numeric expr
-**SIGN(num_expr)** : Returns the positive (+1), zero (0), or negative (-1) sign of the specified expr
-**SQRT(float_expr)** : Returns the square root of the specified float value
-**CEILING(num_expr)** : Returns the smallest integers greater than, or equal to, the specified numeric expr
-**SQUARE(float_expr)** : Returns the square of the specified float value
-**POWER(float_expr,y)** : Returns the value of the specified expr to the specified power
+* **ABS(num_expr)** : Return absolute (positive) value of the specified numeric expr
+* **RAND(seed**) : Return a pseudo-random float value from 0 to 1 (exclusive). Seed is optional value
+* **EXP(float_expr)** : Returns the exponential value 
+* **ROUND(num_expr, length)** : Returns a numeric value, rounded to the specified length or precision
+* **FLOOR(num_expr)** : Returns the largest integer less than or equal  to the specified numeric expr
+* **SIGN(num_expr)** : Returns the positive (+1), zero (0), or negative (-1) sign of the specified expr
+* **SQRT(float_expr)** : Returns the square root of the specified float value
+* **CEILING(num_expr)** : Returns the smallest integers greater than, or equal to, the specified numeric expr
+* **SQUARE(float_expr)** : Returns the square of the specified float value
+* **POWER(float_expr,y)** : Returns the value of the specified expr to the specified power
 
 ### Aggregate Functions	
 Aggregate functions perform a calculation on a set of values and return a single value. Except for COUNT, aggregate functions ignore null values. Aggregate functions are frequently used with the GROUP BY clause of the SELECT Statement.
-**AVG(expr)**: Returns the average of the value in group. Null values are ignored.
-**MIN(expr)**: Returns the minimum value in the expr
-**SUM(expr)**: Returns the sum of all the values, or only the DISTINCT values, in the expr. SUM can be used with numeric columns only. NULL values are ignored.
-**COUNT()**: Returns the number of items in a group. COUNT works like the COUNT_BIG function. The only difference between the two functions is their return values. COUNT always returns an int data type values. COUNT_BIG always returns a bigint data type value.
-**MAX(expr)**: Returns the minimum value in the expr.
+* **AVG(expr)**: Returns the average of the value in group. Null values are ignored.
+* **MIN(expr)**: Returns the minimum value in the expr
+* **SUM(expr)**: Returns the sum of all the values, or only the DISTINCT values, in the expr. SUM can be used with numeric columns only. NULL values are ignored.
+* **COUNT()**: Returns the number of items in a group. COUNT works like the COUNT_BIG function. The only difference between the two functions is their return values. COUNT always returns an int data type values. COUNT_BIG always returns a bigint data type value.
+* **MAX(expr)**: Returns the minimum value in the expr.
 
 ### String Functions	
 Scalar functions perform an operation on a string input value and return a string or numeric values.
-**LTRIM (char_expr)**: Return a character expr after it removes leading blanks
-**RTRIM (char_expr)**: Returns a character string after truncating all trailing blanks
-**CHAR (int_expr)**: Covert as int ASCII code to character
-**CHARINDEX (exprToFind, exprToSearch[,start_location])**: Search an expression for another expression and returns its starting position if found
-**STR (expression)**: Returns character data converted from numeric data
-**CONCAT (str1, str2, str3..)**:  Returns a string that is the result of concatenating two or more string values
-**REPLACE (string, pattern, replacement)**: Replaces all occurrences of a specified string value with another string values
-**SUBSTRING (expr, start, length)**: Returns part of character, text
-**FORMAT value, format ([, culture])**: Returns a value formatted with the specified format and optional culture
-**LEFT (expr, int)**: Returns the LEFT part of a character string with the specified number of characters
-**RIGHT (expr, int)**: Returns the RIGHT part of a character string with the specified number of characters
-**REVERSE (string)**: Returns the reverse order of a string value
-**UPPER (string)**: Returns a character expression with lowercase character data to uppercase
-**LOWER (string)**: Returns a character expression with uppercase character data to lowercase
-**LEN (string)**: Returns the number of characters of the specified string expression, excluding trailing blanks.
+* **LTRIM (char_expr)**: Return a character expr after it removes leading blanks
+* **RTRIM (char_expr)**: Returns a character string after truncating all trailing blanks
+* **CHAR (int_expr)**: Covert as int ASCII code to character
+* **CHARINDEX (exprToFind, exprToSearch[,start_location])**: Search an expression for another expression and returns its starting position if found
+* **STR (expression)**: Returns character data converted from numeric data
+* **CONCAT (str1, str2, str3..)**:  Returns a string that is the result of concatenating two or more string values
+* **REPLACE (string, pattern, replacement)**: Replaces all occurrences of a specified string value with another string values
+* **SUBSTRING (expr, start, length)**: Returns part of character, text
+* **FORMAT value, format ([, culture])**: Returns a value formatted with the specified format and optional culture
+* **LEFT (expr, int)**: Returns the LEFT part of a character string with the specified number of characters
+* **RIGHT (expr, int)**: Returns the RIGHT part of a character string with the specified number of characters
+* **REVERSE (string)**: Returns the reverse order of a string value
+* **UPPER (string)**: Returns a character expression with lowercase character data to uppercase
+* **LOWER (string)**: Returns a character expression with uppercase character data to lowercase
+* **LEN (string)**: Returns the number of characters of the specified string expression, excluding trailing blanks.
 
 ### Date Functions	
 Data and Time functions are scalar functions that perform an operation on a date and time input value and return either a string, numeric, or date and time value
