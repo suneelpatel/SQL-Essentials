@@ -80,9 +80,9 @@ Cursor, sql_variant, table, rowversion, uniqueidentifer, xml
 
 # 2. DDL (DATA DEFINITION LANGUAGE) COMMANDS
 DDL is short name of Data Definition Language, which deals with database schemas and descriptions, of how the data should reside in the database. 
-(a) Create 
-(b) Alter 
-(c) Drop
+##### (a) Create 
+##### (b) Alter 
+##### (c) Drop
 
 ### Create Data Base Objects:
 The CREATE DATABASE statement is used to create a new SQL database. 
