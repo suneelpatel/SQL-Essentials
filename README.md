@@ -312,12 +312,12 @@ Scalar functions perform an operation on a string input value and return a strin
 
 ### Date Functions	
 Data and Time functions are scalar functions that perform an operation on a date and time input value and return either a string, numeric, or date and time value
-**SYSDATETIME()**: Returns a datetime2(7) value that contains the date and time
-**CURRENT_TIMESTAMP**:  Returns a datetime value that contains the date and time
-**DATEPART(datapart, date)**: Returns an integer that represent the specified datepart of the specified date
-**DAY(date)/MONTH(date)/YEAR(date)**: Returns an integer that represents the day/month/year part of the specified dates
-**DATEDIFF(datepart, startdate, enddate)**: Returns the number of date or time datepart boundaries that are crossed between two specified dates
-**DATEADD (datepart, number, date)**: Returns a new datetime value by adding an interval to the specified datepart of the specified date
+* **SYSDATETIME()**: Returns a datetime2(7) value that contains the date and time
+* **CURRENT_TIMESTAMP**:  Returns a datetime value that contains the date and time
+* **DATEPART(datapart, date)**: Returns an integer that represent the specified datepart of the specified date
+* **DAY(date)/MONTH(date)/YEAR(date)**: Returns an integer that represents the day/month/year part of the specified dates
+* **DATEDIFF(datepart, startdate, enddate)**: Returns the number of date or time datepart boundaries that are crossed between two specified dates
+* **DATEADD (datepart, number, date)**: Returns a new datetime value by adding an interval to the specified datepart of the specified date
 
 
 # 6. CREATE ADVANCE DATABASE OBJECTS
