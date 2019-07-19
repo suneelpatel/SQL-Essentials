@@ -53,6 +53,30 @@ Normalization is the process of organizing data to avoid duplication and redunda
 1. It is in the Boyce-Codd Normal Form.
 2. And, it doesn't have Multi-Valued Dependency
 
+#### Data Types in SQL
+A data type is an attribute that specifies the type of data that the object can hold: integer data, character data, monetary data, data and time data, binary strings, and so on.
+
+##### Character String Data Type	char(n): 
+Stores n characters (n bytes, where n is in the range of 1-8000)
+
+* **nchar(n):** Stores n Unicode characters (2n bytes, where n is in the range of 1-4000)
+* **varchar(n):** Stores approximately n characters (Actual string length + 2 bytes, where n is in the range of 1-8000) 
+* **varchar(max):** Stores up to 231-1 characters
+* **nvarchar(n):**  Stores approximately n Characters
+* **nvarchar(max):** Stores up to ((231-1)/2)-2 characters
+
+##### Numeric Data Type:
+Int, tinyint, smallint, bigint, money, smallmoney, decimal(p,s), numeric(p,s), float(n), real
+
+##### Data and Time Data Type:
+Date, datatime, datetime2, datatimeoffset, smalldatatime, time
+
+##### Binary Data Type:
+Bit, binary(n), varbinary(n), varbinary(max)
+
+##### Other Data Type:
+Cursor, sql_variant, table, rowversion, uniqueidentifer, xml
+
 
 # 2. DDL (DATA DEFINITION LANGUAGE) COMMANDS
 
