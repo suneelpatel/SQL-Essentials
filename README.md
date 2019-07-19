@@ -128,7 +128,14 @@ Syntax: CREATE VIEW <view_name> AS SELECT  * FROM <table_name>
 
 
 # 3. DML (DATA MANIPULATION LANGUAGE) COMMANDS
+Data Manipulation Language	Deals with data manipulation, and includes most common SQL statements, and it is used to store, modify, retrieve, delete and update data in database. '
+#### (a) Select
 
+#### (b) Insert 
+
+#### (c) Update 
+
+#### (d) Delete
 
 # 4. RETRIEVE DATA FROM MULTIPLE TABLES
 
