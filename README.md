@@ -79,6 +79,45 @@ Cursor, sql_variant, table, rowversion, uniqueidentifer, xml
 
 
 # 2. DDL (DATA DEFINITION LANGUAGE) COMMANDS
+DDL is short name of Data Definition Language, which deals with database schemas and descriptions, of how the data should reside in the database. (a) Create (b) Alter (c) Drop
+
+### Create Data Base Objects:
+The CREATE DATABASE statement is used to create a new SQL database. 
+Syntax: CREATE DATABASE <database_name>
+
+### Create Table Statements:
+The CREATE TABLE Statement is used to create table in selected database.
+Syntax: CREATE TABLE <Table_Name> (ColumnA datatype, columnB datatype);
+
+### Alter Table Statements:
+**Alter table** is used to: (a) Add, Delete, Modify columns from existing table (b) Add/Drop constraints on an existing table.
+**Syntax:** ALTER TABLE <table_name> ADD <column_name> <datatype>
+ALTER TABLE <table_name> DROP <column_name> <datatype>
+ALTER TABLE <table_name> ALTER COLUMN <column_name> <datatype>
+
+### Drop Table Statements:
+The DROP  TABLE statement is used to drop a table form selected database
+Syntax: DROP TABLE <table_name>
+
+**Various Constraints**	
+* Constraints enforce rules on the table whenever row are inserted, updated and deleted from the table 
+* Prevents the deletion of a table if there are dependencies from other tables
+* Define the constraints at column or table level
+* Constraints can be applied during creation of table or after table creation by using alter command
+
+**NOT NULL**	Specifies that a column must have some value
+
+**UNIQUE**	Specifies that column must have unique values
+
+**PRIMARY KEY**	Specifies a column or a set of columns that uniquely identifies a row. It does not allow null values.
+
+**FOREIGN KEY**	Foreign key is a column(s) that references a column(s) of a table
+
+**CHECK	Specifies** a condition that must be satisfied by all the row in a table.
+
+### Creating View	
+A view is named, derived, virtual table. A view takes the output of a query and treats it as a table.
+Syntax: CREATE VIEW <view_name> AS SELECT  * FROM <table_name>
 
 
 # 3. DML (DATA MANIPULATION LANGUAGE) COMMANDS
