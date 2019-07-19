@@ -129,13 +129,56 @@ Syntax: CREATE VIEW <view_name> AS SELECT  * FROM <table_name>
 
 # 3. DML (DATA MANIPULATION LANGUAGE) COMMANDS
 Data Manipulation Language	Deals with data manipulation, and includes most common SQL statements, and it is used to store, modify, retrieve, delete and update data in database. '
-#### (a) Select
 
-#### (b) Insert 
+DML Commands	This language constitutes the statements that are used to manipulate with the data. It has commands like:
+#### (a) INSERT 
+#### (b) UPDATE 
+#### (c) DELETE 
+#### (d) SELECT
 
-#### (c) Update 
+#### Insert Statement:
+Insert command is used to insert data/record into the database table. Inserting values for the specific columns in the table.
 
-#### (d) Delete
+‘Insert-As-Select’ Statement	‘Insert-As-Select’ Statement allows to insert into a table using the input from another table. Record from one table will be inserted in another table.
+
+#### Update Statement:
+Update statement updates/modify the existing data in the tables. Using these statements we can update the value of a single column or multiple columns in a single statement. Updating single column.
+
+#### Delete Statement:
+Delete Command/Statement helps to delete rows/records from database table. Delete Statements can be executed with or without where conditions. Execution of delete commands without where condition will remove all the records/rows from the table.
+
+#### Select Statement:
+These statements help us to retrieve data or records from data table. Where condition is optional in select statement. Various operators can be used in where conditions for data retrival.
+
+##### Distinct Value:
+Value used to retrieve unique values for a column. Multiple rows can have same values for a column, distinct keyword in select statement  help us to retrieve unique row for a column
+
+##### Ordering Result	Order By: 
+Used along with where clauses to display the specified column in ascending order or descending order.  By default ascending order.
+
+#### Filtering:
+**Logical Operators (AND, OR and NOT)**	Used where condition to join more than tow queries. Used to combine the results of two or more conditions to produce single result.
+
+**AND** : Logical Operator	Used to combine two conditions and it fetches the result which satisfy both the conditions.
+
+**OR** : Logical Operator	OR operators is used to combine two or more conditions and it fetches the result with satisfy any one of the condition in OR statements
+
+**NOT** : Logical Operator	NOT operator is used to negate the conditions and it fetches opposite of the result with satisfy the condition. It is used in combination with other keywords like NOT IN, NOT between etc
+
+#### Filtering: 
+**Comparison Operator  (=, !=, <>, >=, <=,  LIKE, Between, IN)**	Comparison Operators are used in where condition to fetch result from table.
+
+**Between Operator** 	The BETWEEN operator is used to search for values that are within a set of values.
+
+**IN Operator**	Fetches values from a set of literal. It is used to test whether or not a value is “in” the list of values provided after the keyword IN. The IN condition can be used with any data type in SQL. IN condition generally used when we want to check/fetch values from multiple values in single statement. 
+
+**LIKE Operator**	Like condition to perform wild card searches of valid search string values
+•	Search condition can contain either characters or numbers
+•	% denote zero or many characters
+•	_ denote one character
+
+**Case Expression**	Used as a type of IF-THEN-ELSE Statement. Case is used to provide if-then-else type of logic to SQL
+
 
 # 4. RETRIEVE DATA FROM MULTIPLE TABLES
 
