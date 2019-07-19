@@ -321,4 +321,86 @@ Data and Time functions are scalar functions that perform an operation on a date
 
 
 # 6. CREATE ADVANCE DATABASE OBJECTS
+### Store Procedure	
+* A store procedure is a set of sql statements with a name that has been created and stored in the database.
+* Stored procedure can be defined as the set of logical group of SQL statements which are grouped to perform a specific task
 
+#### Like other programming constructs they can:
+* Accept Input Parameters 
+* Returns multiple values (Out Parameters)
+* Contain programming statements
+* Can call other stored procedure/functions
+* Returns status to indicate success or failure
+
+##### Syntax:
+
+CREATE [OR ALTER] PROCEDURE schema_name.procedure_name ( @parameter_name AS parameter_data_type [OUT]) 
+
+AS 
+
+BEGIN 
+
+<SQL STATEMENTS/COMPUTATION> 
+
+END;
+
+### User Defined Function (UDF)	
+UDF Like functions in programming languages, User Defined are compact pieces to Transact SQL Code, which can accept parameters, perform complex calculation and return either a value, or a table.
+* (1)	Scalar Valued Function 
+* (2) Table Valued Function
+
+#### Scalar Valued Function	
+A Scalar valued function is used to return the single value only like integers or may be timestamp.
+
+Syntax:
+
+CREATE [OR ALTER] FUNCTION schema_name. function_name(@parameter_name AS parameter_data_type) 
+
+RETURNS return_data_type 
+
+AS 
+
+BEGIN 
+
+<SQL STATEMENTS/COMPUTATION>
+
+RETURN scalar_value; 
+
+END;
+
+#### Table Valued Function	
+A Table Valued function is used for any number of the row set values. It is useful in the case of the returning multiple rows set at the same time.
+
+**UDF:** Inline Table-Valued Function	Inline table valued functions are subset of user-defined functions that return a table data type
+Inline functions can be used to achieve the functionality of parameterized views
+
+Inline table valued functions can be used to support parameters in the search conditions specified in the WHERE clause. 
+
+Inline User Defined functions follow these rules:
+* The RETURN clause contains only the keyword table. Format need not to be defined for return value
+* There is no function_body delimited by BEGIN and END.
+* The RETURN clause contains a single SELECT statement in parentheses.
+* The table valued function accept only constants or @local_variable arguments.
+
+##### UDF: Multi-Statement Table: Valued Function	User-defined functions that return a table data type can powerful alternatives to views.
+A table valued user defined function can be used where table or view expressions are allowed in Transact SQL queries view are limited to a single SELECT Statement, user –defined functions can contain additional statements
+
+##### In a table- valued user defined function:
+*	The Return clause defines the format of the table. The scope of the local return variable name is local within the function
+*	The Transact-SQL statements in the function body build and insert rows into the return variable defined by the RETURNS clause.
+*	The rows inserted into the variable are returned as the tabular output of the function.
+
+#### Triggers	
+A trigger is a special kind of stored procedure that automatically executes when an event occurs in the database server. DML triggers execute when a user tries to modify data through a data manipulation language (DML) event.
+
+DML events are INSERT, UPDATE, or DELETE statement on table or view.
+
+CREATE [ OR ALTER ] TRIGGER schema_name.trigger_name ON { table | view } 
+
+FOR | AFTER | INSTEAD OF 
+
+[ INSERT ] [ , ] [ UPDATE ] [ , ] [ DELETE ] 
+
+AS 
+
+sql_statement;
