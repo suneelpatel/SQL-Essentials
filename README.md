@@ -79,7 +79,10 @@ Cursor, sql_variant, table, rowversion, uniqueidentifer, xml
 
 
 # 2. DDL (DATA DEFINITION LANGUAGE) COMMANDS
-DDL is short name of Data Definition Language, which deals with database schemas and descriptions, of how the data should reside in the database. (a) Create (b) Alter (c) Drop
+DDL is short name of Data Definition Language, which deals with database schemas and descriptions, of how the data should reside in the database. 
+(a) Create 
+(b) Alter 
+(c) Drop
 
 ### Create Data Base Objects:
 The CREATE DATABASE statement is used to create a new SQL database. 
@@ -90,9 +93,13 @@ The CREATE TABLE Statement is used to create table in selected database.
 Syntax: CREATE TABLE <Table_Name> (ColumnA datatype, columnB datatype);
 
 ### Alter Table Statements:
-**Alter table** is used to: (a) Add, Delete, Modify columns from existing table (b) Add/Drop constraints on an existing table.
+**Alter table** is used to: 
+(a) Add, Delete, Modify columns from existing table 
+(b) Add/Drop constraints on an existing table.
 **Syntax:** ALTER TABLE <table_name> ADD <column_name> <datatype>
+
 ALTER TABLE <table_name> DROP <column_name> <datatype>
+
 ALTER TABLE <table_name> ALTER COLUMN <column_name> <datatype>
 
 ### Drop Table Statements:
