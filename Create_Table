@@ -1,0 +1,31 @@
+##Create Table with Predefine Columns
+
+CREATE TABLE employee(
+emp_id number(4),
+first_name varchar(20),
+last_name varchar(20),
+mgr_id number(4),
+phone_number varchar(20),
+hire_date date,
+job_id number(2),
+deptno number(2),
+CONSTRAINT UK_phone_number UNIQUE (phone_number)
+);
+CREATE TABLE dept(
+deptno number(2) PRIMARY KEY,
+dept_name varchar(20) NOT NULL
+);
+
+## Add New Column in Existing Table
+ALTER TABLE employee ADD salary number(10,2);
+
+## Check the constraints on a table
+ALTER TABLE employee
+ADD CONSTRAINT CHK_Salary CHK(salary >= 0);
+
+## Add Primary Key and Foreign Key on Table
+ALTER TABLE employee ADD CONSTRAINT pk_empid PRIMARY KEY (emp_id);
+ALTER TABLE employee ADD CONSTRAINT FK_deptno FOREIGN KEY (deptno) REFERENCES dept (deptno);
+
+## Remove Unique Constraint
+ALTER TABLE employee REMOVE CONSTRAINT UK_phone_number;
